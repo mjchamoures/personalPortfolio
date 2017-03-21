@@ -10,12 +10,8 @@ export const Navbar = (props) => (
       Home
     </IndexLink>
     {' · '}
-    <Link to='/counter' activeClassName='route--active'>
-      Counter
-    </Link>
-    {' · '}
-    <Link to='/dashboard' activeClassName='route--active'>
-      Dashboard
+    <Link to='/about' activeClassName='route--active'>
+      About
     </Link>
   </div>
 
