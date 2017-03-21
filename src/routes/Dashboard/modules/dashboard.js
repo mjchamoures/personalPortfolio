@@ -22,10 +22,7 @@ export const doubleAsync = () => {
   return (dispatch, getState) => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        dispatch({
-          type    : DASHBOARD_DOUBLE_ASYNC,
-          payload : getState().dashboard
-        })
+        dispatch(increment(getState().dashboard))
         resolve()
       }, 200)
     })
@@ -42,7 +39,6 @@ export const actions = {
 // ------------------------------------
 const ACTION_HANDLERS = {
   [DASHBOARD_VISITS_COUNT]    : (state, action) => state + action.payload,
-  [DASHBOARD_DOUBLE_ASYNC] : (state, action) => state * 2
 }
 
 // ------------------------------------
