@@ -17,6 +17,10 @@ export const Navbar = (props) => (
     <IndexLink to='/projects' activeClassName='route--active'>
       Projects
     </IndexLink>
+    {' · '}
+    <IndexLink to='/coreComponentLibrary' activeClassName='route--active'>
+      Core Component Library
+    </IndexLink>
   </div>
 
 );
