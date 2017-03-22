@@ -5,7 +5,7 @@ import classes from './Navbar.scss';
 
 export const Navbar = (props) => (
 
-  <div>
+  <div className="text-center">
     <IndexLink to='/' activeClassName='route--active'>
       Home
     </IndexLink>
