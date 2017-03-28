@@ -1,3 +1,3 @@
-import Input from './Input'
+import FormGroupInputWithLabel from './FormGroupInputWithLabel'
 
-export default Input
+export default FormGroupInputWithLabel

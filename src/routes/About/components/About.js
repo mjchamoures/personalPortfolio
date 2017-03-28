@@ -26,4 +26,4 @@ export const About = (props) => (
 
 );
 
-export default About
+export default About;
