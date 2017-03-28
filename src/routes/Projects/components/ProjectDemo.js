@@ -1,5 +1,6 @@
 import React from 'react';
 import { Panel } from 'react-bootstrap';
+import TexasHoldEmComponent from './TexasHoldEmComponent';
 
 class ProjectDemo extends React.Component {
 
@@ -10,7 +11,7 @@ class ProjectDemo extends React.Component {
     return (
 
       <Panel>
-       Hey
+       <TexasHoldEmComponent />
       </Panel>
 
     );
