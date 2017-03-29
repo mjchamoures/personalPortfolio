@@ -18,7 +18,7 @@ class ProjectDescription extends React.Component {
               Project Name:
             </Col>
             <Col componentClass={FormControl.Static} xs={12} sm={10}>
-              Project 1
+              {this.props.displayName}
             </Col>
           </FormGroup>
           
@@ -27,7 +27,7 @@ class ProjectDescription extends React.Component {
               Description:
             </Col>
             <Col componentClass={FormControl.Static} xs={12} sm={10}>
-              This project does....
+              {this.props.description}
             </Col>
           </FormGroup>
 
@@ -45,7 +45,7 @@ class ProjectDescription extends React.Component {
               GitHub:
             </Col>
             <Col xs={12} sm={10}>
-              <Button bsStyle="link" href="https://github.com/mjchamoures" target="_blank">https://github.com/mjchamoures</Button>
+              <Button bsStyle="link" href={this.props.repo} target="_blank">{this.props.repo}</Button>
             </Col>
           </FormGroup>
 

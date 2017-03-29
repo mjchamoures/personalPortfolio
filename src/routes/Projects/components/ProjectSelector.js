@@ -13,8 +13,13 @@ import {Nav, NavItem, Navbar, NavDropdown, MenuItem, Glyphicon} from 'react-boot
 class ProjectSelector extends React.Component {
 
   render() {
-
+    let projectList = [];
     // props will contain project list ids
+    for(let i = 0; i < this.props.projectList.length; i++) {
+      let project = this.props.projectList[i];
+      projectList.push(<NavItem key={project.id} eventKey={project.id} onClick={() => this.props.onClick(project.id)} > {project.displayName} </NavItem>);
+
+    }
 
     return  (
       <div id="sidebar-menu" >
@@ -22,15 +27,14 @@ class ProjectSelector extends React.Component {
 
           <Navbar.Header>
               <Navbar.Brand>
-                  <a href="/">Projects</a>
+                  <a href="/projects">Projects</a>
               </Navbar.Brand>
               <Navbar.Toggle />
           </Navbar.Header>
 
           <Navbar.Collapse>
               <Nav>
-                  <NavItem eventKey={1}>Project 1</NavItem>
-                  <NavItem eventKey={2}>Project 2</NavItem>
+                  { projectList }
               </Nav>
           </Navbar.Collapse>
 

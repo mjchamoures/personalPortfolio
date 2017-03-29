@@ -11,7 +11,7 @@ class ProjectDemo extends React.Component {
     return (
 
       <Panel>
-       <TexasHoldEmComponent />
+       {this.props.component}
       </Panel>
 
     );

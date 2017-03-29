@@ -15,11 +15,18 @@ class ProjectShowCase extends React.Component {
     return (
       <Col xs={12}>
         <Col xs={12}>
-          <ProjectDescription />
+          <ProjectDescription 
+            displayName={this.props.currentSelectedProject.displayName}
+            description={this.props.currentSelectedProject.description}
+            repo={this.props.currentSelectedProject.repo}
+
+          />
         </Col>
 
         <Col xs={12}>
-          <ProjectDemo />
+          <ProjectDemo 
+            component={this.props.currentSelectedProject.component}
+          />
         </Col>  
       </Col>
 
