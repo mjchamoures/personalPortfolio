@@ -1,3 +1,10 @@
+/* ProjectSelector component, which will hold links to all the projects
+ *
+ * author : michael chamoures
+ * created date : 3/27/17
+ * last updated date : 3/28/17
+ */
+
 import React from 'react';
 import ProjectDescription from './ProjectDescription';
 import ProjectDemo from './ProjectDemo';
@@ -16,16 +23,16 @@ class ProjectShowCase extends React.Component {
       <Col xs={12}>
         <Col xs={12}>
           <ProjectDescription 
-            displayName={this.props.currentSelectedProject.displayName}
-            description={this.props.currentSelectedProject.description}
-            repo={this.props.currentSelectedProject.repo}
+            displayName={this.props.project.displayName}
+            description={this.props.project.description}
+            repo={this.props.project.repo}
 
           />
         </Col>
 
         <Col xs={12}>
           <ProjectDemo 
-            component={this.props.currentSelectedProject.component}
+            component={this.props.project.component}
           />
         </Col>  
       </Col>

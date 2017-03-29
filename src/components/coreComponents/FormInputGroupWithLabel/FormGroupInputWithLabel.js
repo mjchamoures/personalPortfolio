@@ -13,7 +13,7 @@ export const FormGroupInputWithLabel = (props) => (
     <Col componentClass={ControlLabel} sm={props.labelColSize}>
       {props.label}
     </Col>
-    <Col xs={12} sm={props.colSize}>
+    <Col xs={12} sm={props.inputColSize}>
       <FormControl type="text" placeholder={props.placeholder} value={props.value} />
     </Col>
   </FormGroup>
@@ -27,7 +27,7 @@ FormGroupInputWithLabel.propTypes = {
   label : React.PropTypes.string,
   placeholder : React.PropTypes.string,
   value : React.PropTypes.string,
-  controlId : React.PropTypes.string.isRequired,
+  controlId : React.PropTypes.string,
   onChange   : React.PropTypes.func.isRequired,
   disabled : React.PropTypes.bool,
 };

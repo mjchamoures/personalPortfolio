@@ -15,7 +15,7 @@ export const Button = (props) => (
 
 
 Button.propTypes = {
-  size     : React.PropTypes.number.isRequired,
+  size     : React.PropTypes.string.isRequired,
   type : React.PropTypes.string.isRequired,
   text : React.PropTypes.string.isRequired,
   onClick   : React.PropTypes.func.isRequired,

@@ -1,3 +1,11 @@
+/* ProjectSelector component, which will hold links to all the projects
+ *
+ * author : michael chamoures
+ * created date : 3/27/17
+ * last updated date : 3/28/17
+ */
+
+
 /* Component files will always import React, I'm assuming */
 import React from 'react';
 import ProjectSelector from './ProjectSelector';
@@ -10,7 +18,7 @@ import { Col } from 'react-bootstrap';
 import TexasHoldEmComponent from './TexasHoldEmComponent';
 
 /* Next, component files will export a const function declaration, taking in props */
-class Projects extends React.Component {
+class ProjectsPage extends React.Component {
 
   constructor(props) {
 
@@ -43,7 +51,7 @@ class Projects extends React.Component {
         </Col>
 
         
-        <ProjectShowCase currentSelectedProject={this.state.currentSelectedProject} />
+        <ProjectShowCase project={this.state.currentSelectedProject} />
         
       </div>
     
@@ -90,4 +98,4 @@ const projectList = [
 
 
 
-export default Projects;  
+export default ProjectsPage;  

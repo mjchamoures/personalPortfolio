@@ -11,17 +11,17 @@ export default (store) => ({
        and embed an async module loader (jsonp) when bulding */
     require.ensure([], (require) => {
       /* Webback - use require call back to define dependencies for bundling */
-      const CoreComponentLibrary = require('./containers/CoreComponentLibraryContainer').default;
+      const CoreComponentLibraryPage = require('./containers/CoreComponentLibraryPageContainer').default;
       // const reducer = require('./modules/about').default; // TODO
 
       /* add the reducer to the store on the key 'about' */
       // injectReducer(store, { key : 'about', reducer }); // TODO
 
       /* Return getComponent */
-      cb(null, CoreComponentLibrary);
+      cb(null, CoreComponentLibraryPage);
 
       /* webback named bundle */
-    }, 'coreComponentLibrary');
+    }, 'coreComponentLibraryPage');
   }
 
 });

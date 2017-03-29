@@ -1,3 +1,10 @@
+/* ProjectSelector component, which will hold links to all the projects
+ *
+ * author : michael chamoures
+ * created date : 3/27/17
+ * last updated date : 3/28/17
+ */
+
 import React from 'react';
 import { FormControl } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';

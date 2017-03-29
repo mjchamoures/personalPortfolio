@@ -1,11 +1,18 @@
+/* ProjectSelector component, which will hold links to all the projects
+ *
+ * author : michael chamoures
+ * created date : 3/27/17
+ * last updated date : 3/28/17
+ */
+
 import { connect } from 'react-redux'
 
 /*  This is a container component. Notice it does not contain any JSX,
     nor does it import React. This component is **only** responsible for
     wiring in the actions and state necessary to render a presentational
-    component - in this case, the CoreComponentLibrary page:   */
+    component - in this case, the Projects page:   */
 
-import CoreComponentLibrary from '../components/CoreComponentLibrary'
+import ProjectsPage from '../components/ProjectsPage'
 
 
 /*  Object of action creators (can also be function that returns object).
@@ -19,7 +26,7 @@ const mapDispatchToProps = {
 
 // TODO : change this
 const mapStateToProps = (state) => ({
-  about : state.coreComponentLibrary
+  about : state.projects
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
@@ -36,4 +43,4 @@ const mapStateToProps = (state) => ({
     Selectors are composable. They can be used as input to other selectors.
     https://github.com/reactjs/reselect    */
 
-export default connect(mapStateToProps, mapDispatchToProps)(CoreComponentLibrary)
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectsPage)

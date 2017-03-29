@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 /*  This is a container component. Notice it does not contain any JSX,
     nor does it import React. This component is **only** responsible for
     wiring in the actions and state necessary to render a presentational
-    component - in this case, the Projects page:   */
+    component - in this case, the CoreComponentLibrary page:   */
 
-import Projects from '../components/Projects'
+import CoreComponentLibraryPage from '../components/CoreComponentLibraryPage'
 
 
 /*  Object of action creators (can also be function that returns object).
@@ -19,7 +19,7 @@ const mapDispatchToProps = {
 
 // TODO : change this
 const mapStateToProps = (state) => ({
-  about : state.projects
+  about : state.coreComponentLibrary
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
@@ -36,4 +36,4 @@ const mapStateToProps = (state) => ({
     Selectors are composable. They can be used as input to other selectors.
     https://github.com/reactjs/reselect    */
 
-export default connect(mapStateToProps, mapDispatchToProps)(Projects)
+export default connect(mapStateToProps, mapDispatchToProps)(CoreComponentLibraryPage)

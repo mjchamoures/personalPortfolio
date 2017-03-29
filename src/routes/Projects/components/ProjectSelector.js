@@ -2,7 +2,7 @@
  *
  * author : michael chamoures
  * created date : 3/27/17
- * last updated date : 3/27/17
+ * last updated date : 3/28/17
  */
 
 import React from 'react';
@@ -15,11 +15,11 @@ class ProjectSelector extends React.Component {
   render() {
     let projectList = [];
     // props will contain project list ids
-    for(let i = 0; i < this.props.projectList.length; i++) {
-      let project = this.props.projectList[i];
+    this.props.projectList.forEach((project) => {
+
       projectList.push(<NavItem key={project.id} eventKey={project.id} onClick={() => this.props.onClick(project.id)} > {project.displayName} </NavItem>);
 
-    }
+    });
 
     return  (
       <div id="sidebar-menu" >
@@ -27,7 +27,7 @@ class ProjectSelector extends React.Component {
 
           <Navbar.Header>
               <Navbar.Brand>
-                  <a href="/projects">Projects</a>
+                  <a href="/projects">Projects | </a>
               </Navbar.Brand>
               <Navbar.Toggle />
           </Navbar.Header>
