@@ -6,7 +6,7 @@ import { Col } from 'react-bootstrap';
 export const Button = (props) => (
 
   <Col xs={12} sm={2}>
-    <button className={getClassName(props)} disabled={props.disabled} onClick={() => props.onClick()}>
+    <button className={getClassName(props)} disabled={props.disabled} onClick={() => props.onClick(event)}>
       {props.text}
     </button>
   </Col>

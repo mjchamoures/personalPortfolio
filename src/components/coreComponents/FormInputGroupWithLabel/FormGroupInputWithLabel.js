@@ -7,19 +7,38 @@ import { Col } from 'react-bootstrap';
 
 
 
-export const FormGroupInputWithLabel = (props) => (
+class  FormGroupInputWithLabel extends React.Component {
 
-  <FormGroup controlId={props.controlId}>
-    <Col componentClass={ControlLabel} sm={props.labelColSize}>
-      {props.label}
-    </Col>
-    <Col xs={12} sm={props.inputColSize}>
-      <FormControl type="text" placeholder={props.placeholder} value={props.value} />
-    </Col>
-  </FormGroup>
+  constructor() {
+    super();
 
-);
+    this.handleChangeEvent = this.handleChangeEvent.bind(this);
 
+  }
+
+  handleChangeEvent(event) {
+
+    let numStars = parseInt(event.target.value.trim());
+
+    this.props.onChange(numStars);
+
+  }
+
+  render() {
+    return (
+
+      <FormGroup controlId={this.props.controlId}>
+        <Col componentClass={ControlLabel} sm={this.props.labelColSize}>
+          {this.props.label}
+        </Col>
+        <Col xs={12} sm={this.props.inputColSize}>
+          <FormControl type="text" placeholder={this.props.placeholder} value={this.props.value} onChange={this.handleChangeEvent} />
+        </Col>
+      </FormGroup>
+
+    );
+  }
+}
 
 FormGroupInputWithLabel.propTypes = {
   labelColSize : React.PropTypes.number,
