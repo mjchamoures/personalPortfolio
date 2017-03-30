@@ -13,6 +13,7 @@ import ComponentShowcase from './ComponentShowcase';
 import { Col } from 'react-bootstrap';
 import Button from '../../../components/coreComponents/Button';
 import FormInputGroupWithLabel from '../../../components/coreComponents/FormInputGroupWithLabel';
+import StarRating from '../../../components/coreComponents/StarRating';
 
 
 class CoreComponentLibrary extends React.Component {
@@ -111,6 +112,16 @@ const componentList = [
                   onChange={() => {console.log("hey")}}
                 />,
     repo : 'google.com'
+  },
+  {
+    id : 'StarRating',
+    displayName : 'Star Rating',
+    description : 'Simple Star rating system... configurable with number of stars provided, initial numFilled, and name of it',
+    component : <StarRating
+                  numStars = {5}
+                  name = {"Rating:"}
+                />,
+    repo : 'stars.com'
   },
 ];
 

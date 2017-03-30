@@ -15,6 +15,7 @@ class ComponentSelector extends React.Component {
   render() {
 
     let components = [];
+    components.push(<ListGroupItem active={false} key={"home"} eventKey={"home"} onClick={() => this.props.onClick("home") } >[*]</ListGroupItem>)
 
     this.props.components.forEach((component) => {
 
