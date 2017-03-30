@@ -16,11 +16,13 @@ class  FormGroupInputWithLabel extends React.Component {
 
   }
 
+  
+
   handleChangeEvent(event) {
 
-    let numStars = parseInt(event.target.value.trim());
+    let value = event.target.value;
 
-    this.props.onChange(numStars);
+    this.props.onChange(value);
 
   }
 

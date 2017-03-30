@@ -55,6 +55,7 @@ class StarRating extends React.Component {
     this.handleClickEvent = this.handleClickEvent.bind(this);
   }
 
+
   handleClickEvent(starNum) {
 
     this.setState({

@@ -21,20 +21,22 @@ class StarRatingDemo extends React.Component {
 
       name : "Hospitality",
       numStars : 5,
-      submitIsDisabled : false
+      submitIsDisabled : false,
+
     }
 
     this.handleNumStarChangeEvent = this.handleNumStarChangeEvent.bind(this);
   }
 
   handleNumStarChangeEvent(value) {
-
-    // if(value > 0) {
-      this.setState({
-        numStars : value,
-        submitIsDisabled : false,
-      });
-    // }
+    // 
+    let numStars = (value.trim() === "") ? 0 : parseInt(value.trim());
+    
+    this.setState({
+      numStars : numStars,
+      submitIsDisabled : false,
+    });
+    
 
 
   }
@@ -63,9 +65,9 @@ class StarRatingDemo extends React.Component {
               inputColSize={4}
               placeholder={"integer > 0"}
               onChange={this.handleNumStarChangeEvent}
-              value={this.state.numStars.toString()}
+              value={(this.state.numStars > 0) ? this.state.numStars.toString() : ""}
             />
-            <FormGroup>
+            <!--<FormGroup>
               <Button
                 size={"sm"}
                 type={"primary"}
@@ -73,7 +75,7 @@ class StarRatingDemo extends React.Component {
                 disabled={this.state.submitIsDisabled}
                 text={"Submit"} 
               />
-            </FormGroup>
+            </FormGroup> -->
         </Col>
            
 
