@@ -117,7 +117,7 @@ class StarRatingDemo extends React.Component {
                 name={"stars"}
                 labelColSize={10}
                 inputColSize={8}
-                placeholder={"integer > 0"}
+                placeholder={""}
                 onChange={this.handleLabelNameChangeEvent}
                 // value={this.state.name}
               />
