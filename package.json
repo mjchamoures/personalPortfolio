@@ -13,14 +13,15 @@
     "lint": "eslint bin build config server src tests",
     "lint:fix": "npm run lint -- --fix",
     "start": "better-npm-run start:prod",
+    "serve": "better-npm-run start",
+    "postinstall": "npm run deploy:prod",
     "dev": "better-npm-run dev",
     "test": "better-npm-run test",
     "test:dev": "npm run test -- --watch",
     "deploy": "better-npm-run deploy",
     "deploy:dev": "better-npm-run deploy:dev",
     "deploy:prod": "better-npm-run deploy:prod",
-    "codecov": "cat coverage/*/lcov.info | codecov",
-    "postinstall": "webpack -p" 
+    "codecov": "cat coverage/*/lcov.info | codecov"
   },
   "betterScripts": {
     "compile": {
