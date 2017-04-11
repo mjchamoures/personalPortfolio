@@ -46,10 +46,10 @@ class StarRating extends React.Component {
   //           rather than setState here directly, which will trigger a re-render of this Component?
   //             Or this component also takes a callback onClick as a prop and passes that on down?
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      numFilled : 0, // this might not have to be in state
+      numFilled : this.props.numFilled, // this might not have to be in state
     }
 
     this.handleClickEvent = this.handleClickEvent.bind(this);
