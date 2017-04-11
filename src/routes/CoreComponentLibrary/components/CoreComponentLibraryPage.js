@@ -8,7 +8,7 @@
 import React from 'react';
 
 import ComponentSelector from './ComponentSelector';
-import ComponentShowcase from './ComponentShowcase';
+import ComponentShowCase from './ComponentShowCase';
 
 import { Col } from 'react-bootstrap';
 import Button from '../../../components/coreComponents/Button';
@@ -53,7 +53,7 @@ class CoreComponentLibrary extends React.Component {
           currentSelectedComponentId={this.state.currentSelectedComponent.id}
         />
 
-        <ComponentShowcase 
+        <ComponentShowCase 
           component={this.state.currentSelectedComponent}
         />
 
