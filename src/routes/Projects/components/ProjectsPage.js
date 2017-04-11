@@ -16,6 +16,7 @@ import { Col } from 'react-bootstrap';
 
 /* Projects */
 import TexasHoldEmComponent from './TexasHoldEmComponent';
+import CoreComponentLibraryPage from '../../CoreComponentLibrary/components/CoreComponentLibraryPage';
 
 /* Next, component files will export a const function declaration, taking in props */
 class ProjectsPage extends React.Component {
@@ -86,10 +87,10 @@ const projectList = [
     repo : 'google.scom'
   },
   {
-    id : 'test',
-    displayName : 'EYYY test!',
-    description : 'nothing to see yet',
-    component : <Col></Col>,
+    id : 'ComponentLibrary',
+    displayName : 'React Component Library!',
+    description : 'A set of React components',
+    component : <CoreComponentLibraryPage />,
     repo : 'google.com'
   },
 ];
