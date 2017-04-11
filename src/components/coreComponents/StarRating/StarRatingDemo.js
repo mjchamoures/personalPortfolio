@@ -29,8 +29,18 @@ class StarRatingDemo extends React.Component {
     }
 
     this.handleNumStarChangeEvent = this.handleNumStarChangeEvent.bind(this);
-    this.handleSubmitClickEvent = this.handleSubmitClickEvent.bind(this);
+    this.handleNumSubmitClickEvent = this.handleNumSubmitClickEvent.bind(this);
     this.handleLabelNameChangeEvent = this.handleLabelNameChangeEvent.bind(this);
+    this.handleLabelSubmitClickEvent = this.handleLabelSubmitClickEvent.bind(this);
+    this.handleStarClickEvent = this.handleStarClickEvent.bind(this);
+  }
+
+  handleStarClickEvent(starNum) {
+
+    this.setState({
+      numFilled : starNum,
+    });
+
   }
 
   handleNumStarChangeEvent(value) {
@@ -64,6 +74,14 @@ class StarRatingDemo extends React.Component {
 
   }
 
+  handleLabelSubmitClickEvent(event) {
+
+    this.setState({
+      name : this.state.labelNameInputVal,
+      numFilled : 0, // resetting numFilled for now until rating is fetched
+    });
+
+  }
 
   render() {
 
@@ -85,7 +103,7 @@ class StarRatingDemo extends React.Component {
                 <Button
                   size={"sm"}
                   type={"primary"}
-                  onClick={this.handleSubmitClickEvent}
+                  onClick={this.handleNumSubmitClickEvent}
                   disabled={this.state.submitIsDisabled}
                   text={"Submit"} 
                 />
@@ -101,13 +119,13 @@ class StarRatingDemo extends React.Component {
                 inputColSize={8}
                 placeholder={"integer > 0"}
                 onChange={this.handleLabelNameChangeEvent}
-                value={this.state.labelNameInputVal}
+                // value={this.state.name}
               />
               <FormGroup>
                 <Button
                   size={"sm"}
                   type={"primary"}
-                  onClick={this.handleSubmitClickEvent}
+                  onClick={this.handleLabelSubmitClickEvent}
                   disabled={this.state.submitIsDisabled}
                   text={"Submit"} 
                 />
@@ -121,6 +139,7 @@ class StarRatingDemo extends React.Component {
             numStars = {this.state.numStars}
             name = {this.state.name}
             numFilled={this.state.numFilled}
+            onClick={(i) => this.handleStarClickEvent(i)}
           />
 
         </Col>

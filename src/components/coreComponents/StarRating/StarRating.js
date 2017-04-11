@@ -48,20 +48,16 @@ class StarRating extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      numFilled : this.props.numFilled, // this might not have to be in state
-    }
+    // this.state = {
+    //   numFilled : this.props.numFilled, // this might not have to be in state
+    // }
 
     this.handleClickEvent = this.handleClickEvent.bind(this);
   }
 
 
   handleClickEvent(starNum) {
-
-    this.setState({
-      numFilled : starNum,
-    });
-
+    this.props.onClick(starNum);
   }
 
   render() {
@@ -70,7 +66,7 @@ class StarRating extends React.Component {
     return (
       <Col xs={12} s={4}>
         {this.props.name}
-        <StarSet numStars={this.props.numStars} numFilled={this.state.numFilled} onClick={(i) => this.handleClickEvent(i)} />
+        <StarSet numStars={this.props.numStars} numFilled={this.props.numFilled} onClick={(i) => this.handleClickEvent(i)} />
 
       </Col>
 
