@@ -26,6 +26,7 @@ class ProjectShowCase extends React.Component {
             displayName={this.props.project.displayName}
             description={this.props.project.description}
             repo={this.props.project.repo}
+            techUsed={this.props.project.techUsed}
 
           />
         </Col>

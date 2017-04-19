@@ -16,6 +16,7 @@ import { Col } from 'react-bootstrap';
 
 /* Projects */
 import TexasHoldEmComponent from './TexasHoldEmComponent';
+import KineticWall from './KineticWall';
 import CoreComponentLibraryPage from '../../CoreComponentLibrary/components/CoreComponentLibraryPage';
 
 /* Next, component files will export a const function declaration, taking in props */
@@ -84,14 +85,24 @@ const projectList = [
     displayName : 'Texas Hold \'Em',
     description : "This is a texas hold em game. You can add as many players as in a single deck. No Scoring yet.",
     component : <TexasHoldEmComponent />,
-    repo : 'google.scom'
+    repo : 'https://github.com/mjchamoures/personalPortfolio/blob/master/src/routes/Projects/components/TexasHoldEmComponent.jsx',
+    techUsed : 'React, bootstrap, etc...'
   },
   {
     id : 'ComponentLibrary',
     displayName : 'React Component Library!',
     description : 'A set of React components',
     component : <CoreComponentLibraryPage />,
-    repo : 'google.com'
+    repo : 'https://github.com/mjchamoures/personalPortfolio/blob/master/src/routes/CoreComponentLibrary/components/CoreComponentLibraryPage.js',
+    techUsed : 'React, bootstrap, etc...'
+  },
+  {
+    id : 'kineticWall',
+    displayName : 'Kinetic Wall',
+    description : 'The Kinetic Wall is an interactive intervention that facilitates the serendipitous social interaction between pedestrians on Market Street. \n The Kinetic Wall is composed of an array of lightweight tiles that rotate about their center in response to sensor input. The wall’s Kinect sensors monitor proximity and location of those within range of the wall. As one gets closer to the wall, the tiles are activated, and rotate to 45 degrees to allow some transparency. When two people are aligned at either side of the wall, the panels in the zone of said people rotate to 90 degrees, allowing full visual connection. \n This sudden and unexpected face to face with a stranger provides a unique experience that strips away the anonymity of the urban street. During phases where no individual is within immediate range, the wall flutters and flirts, inviting people to investigate.',
+    component : <KineticWall />,
+    repo : 'http://amlgm.com/#/wall/',
+    techUsed : 'Xbox Kinect, Servos, Rasberry Pi'
   },
 ];
 

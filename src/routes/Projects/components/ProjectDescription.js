@@ -44,13 +44,13 @@ class ProjectDescription extends React.Component {
               Technologies used: 
             </Col>
             <Col componentClass={FormControl.Static} xs={12} sm={10}>
-              React, bootstrap, etc...
+              {this.props.techUsed}
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalGithub">
             <Col componentClass={ControlLabel} sm={2}>
-              GitHub:
+              More Info / Github:
             </Col>
             <Col xs={12} sm={10}>
               <Button bsStyle="link" href={this.props.repo} target="_blank">{this.props.repo}</Button>
