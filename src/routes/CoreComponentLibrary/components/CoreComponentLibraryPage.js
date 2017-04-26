@@ -14,6 +14,7 @@ import { Col } from 'react-bootstrap';
 import Button from '../../../components/coreComponents/Button';
 import FormInputGroupWithLabel from '../../../components/coreComponents/FormInputGroupWithLabel';
 import StarRatingDemo from '../../../components/coreComponents/StarRating/StarRatingDemo';
+import AutoCompleteInputDemo from '../../../components/coreComponents/AutoCompleteInput/AutoCompleteInputDemo';
 
 
 class CoreComponentLibrary extends React.Component {
@@ -119,6 +120,13 @@ const componentList = [
     description : 'Simple Star rating system... configurable with number of stars provided, initial numFilled, and name of it',
     component : <StarRatingDemo />,
     repo : 'stars.com'
+  },
+  {
+    id : 'AutoCompleteInput',
+    displayName : 'AutoComplete / Suggestion Input',
+    description : 'Search and display a number of suggestions, with navigation between suggestions',
+    component : <AutoCompleteInputDemo />,
+    repo : 'auto.com'
   },
 ];
 
