@@ -15,6 +15,7 @@ import Button from '../../../components/coreComponents/Button';
 import FormInputGroupWithLabel from '../../../components/coreComponents/FormInputGroupWithLabel';
 import StarRatingDemo from '../../../components/coreComponents/StarRating/StarRatingDemo';
 import AutoCompleteInputDemo from '../../../components/coreComponents/AutoCompleteInput/AutoCompleteInputDemo';
+import DropdownMenuDemo from '../../../components/coreComponents/DropdownMenu/DropdownMenuDemo';
 
 
 class CoreComponentLibrary extends React.Component {
@@ -127,6 +128,13 @@ const componentList = [
     description : 'Search and display a number of suggestions, with navigation between suggestions',
     component : <AutoCompleteInputDemo />,
     repo : 'auto.com'
+  },
+  {
+    id : 'DropdownMenu',
+    displayName : 'Dropdown Menu Varations',
+    description : 'Various dropdown menu types',
+    component : <DropdownMenuDemo />,
+    repo : 'dropdown.com'
   },
 ];
 
