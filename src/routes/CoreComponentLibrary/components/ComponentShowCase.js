@@ -11,34 +11,47 @@ import ComponentDescription from './ComponentDescription';
 import ComponentDemo from './ComponentDemo';
 
 import { Col, Panel, FormControl, ControlLabel, FormGroup, Row } from 'react-bootstrap';
+import './CoreComponentLibraryPage.scss';
 
 
 class ComponentShowCase extends React.Component {
+
+
+  constructor() {
+
+    super();
+  }
 
 
   render() {
 
     return (
 
-      <Col md={9}>
-
+      <div id="component-showcase-main">
         <Col md={12}>
+          <p className="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas" onClick={this.props.handleCollapseToggle}><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+          <Row>
+            <Col md={12}>
 
-          <ComponentDescription
-            displayName={this.props.component.displayName}
-            description={this.props.component.description}
-            repo={this.props.component.repo}
-          />
+              <ComponentDescription
+                displayName={this.props.component.displayName}
+                description={this.props.component.description}
+                repo={this.props.component.repo}
+              />
+            </Col>
+          </Row>
+
+          <Row>
+            <Col md={12}>
+              <ComponentDemo
+                component={this.props.component.component}
+              />
+            </Col>
+          </Row>
         </Col>
-
-        <Col md={12}>
-
-          <ComponentDemo
-            component={this.props.component.component}
-          />
-        </Col>
-
-      </Col>
+      </div>
 
 
     );

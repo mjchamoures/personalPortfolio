@@ -12,6 +12,13 @@ import './CoreComponentLibraryPage.scss';
 
 class ComponentSelector extends React.Component {
 
+
+  constructor() {
+
+    super();
+
+  }
+
   render() {
 
     let components = [];
@@ -19,30 +26,33 @@ class ComponentSelector extends React.Component {
     this.props.components.forEach((component) => {
 
       let isActive = (component.id === this.props.currentSelectedComponentId) ? true : false; 
+      let listItem = (
+          <li 
+            active={isActive} 
+            key={component.id} 
+            eventKey={component.id} 
+            onSelect={() => this.props.onClick(component.id) } 
+          >
+            <a>{component.displayName}</a>
+          </li>
 
-      components.push(<NavItem active={isActive} key={component.id} eventKey={component.id} onSelect={() => this.props.onClick(component.id) } >{component.displayName}</NavItem>)
+      );
+      components.push(listItem);
     
     });
 
     return (
+      
+        <div id="component-selector-sidebar" className="component-selector sidebar-offcanvas">
+          <Col md={12}>
+            <h3>Components</h3>
 
-      <Col md={3}>
-        <Navbar collapseOnSelect className="component-selector-navbar">
+            <ul className="nav nav-pills nav-stacked component-selector-list">
+              {components}
+            </ul> 
+          </Col>
+        </div>
 
-          <Navbar.Header >
-            <Navbar.Brand className="component-selector-header-brand">
-              <p>Components</p>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-
-            <Navbar.Collapse>
-              <Nav stacked>
-                {components}
-              </Nav> 
-            </Navbar.Collapse>
-        </Navbar>
-      </Col>
     );
 
   }

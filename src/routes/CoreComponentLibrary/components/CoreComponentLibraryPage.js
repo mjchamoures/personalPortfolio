@@ -11,6 +11,9 @@ import ComponentSelector from './ComponentSelector';
 import ComponentShowCase from './ComponentShowCase';
 
 import { Col, Row } from 'react-bootstrap';
+import './CoreComponentLibraryPage.scss';
+
+
 import Button from '../../../components/coreComponents/Button';
 import FormInputGroupWithLabel from '../../../components/coreComponents/FormInputGroupWithLabel';
 import StarRatingDemo from '../../../components/coreComponents/StarRating/StarRatingDemo';
@@ -29,7 +32,7 @@ class CoreComponentLibrary extends React.Component {
     };
 
     this.handleComponentSelectorClick = this.handleComponentSelectorClick.bind(this);
-
+    this.handleCollapseToggle = this.handleCollapseToggle.bind(this);
   }
 
   handleComponentSelectorClick(componentId) {
@@ -42,12 +45,18 @@ class CoreComponentLibrary extends React.Component {
 
   }
 
+  handleCollapseToggle() {
+
+    $('.row-offcanvas').toggleClass('active');
+    console.log("get");
+  }
+
   render() {
 
 
     return (
 
-      <Row>
+      <div className="row-offcanvas row-offcanvas-left">
 
         <ComponentSelector 
           components={componentList}
@@ -57,9 +66,9 @@ class CoreComponentLibrary extends React.Component {
 
         <ComponentShowCase 
           component={this.state.currentSelectedComponent}
+          handleCollapseToggle={this.handleCollapseToggle}
         />
-
-      </Row>
+      </div>
     
     );
 
