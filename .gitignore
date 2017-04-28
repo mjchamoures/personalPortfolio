@@ -1,2 +1,4 @@
 /node_modules
 .idea/workspace.xml
+.DS_Store
+src/.DS_Store
