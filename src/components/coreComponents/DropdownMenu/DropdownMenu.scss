@@ -14,14 +14,15 @@
 
 .dropdown-menu {
   border: 1px solid transparent;
-    margin: 5px 0 0;
-    padding: 9px 0;
-    background: #fff;
-    -moz-box-shadow: 0 8px 16px -4px #000;
-    -webkit-box-shadow: 0 8px 16px -4px #000;
-    box-shadow: 0 8px 16px -4px #000;
-    border-color: #dbdbdb;
-    border-radius: 4px;
-    min-width: 160px;
-    max-width: 300px;
+  display: inherit !important;
+  margin: 5px 0 0;
+  padding: 9px 0;
+  background: #fff;
+  -moz-box-shadow: 0 8px 16px -4px #000;
+  -webkit-box-shadow: 0 8px 16px -4px #000;
+  box-shadow: 0 8px 16px -4px #000;
+  border-color: #dbdbdb;
+  border-radius: 4px;
+  min-width: 160px;
+  max-width: 300px;
 }

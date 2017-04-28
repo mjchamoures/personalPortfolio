@@ -45,7 +45,7 @@ class DropdownMenuItemList extends React.Component {
     let items= [];
 
     for(let i = 0; i < this.props.items.length; i++) {
-      items.push(<DropdownMenuItem key={i} onClick={this.props.onClick} itemType={this.props.itemType} item={this.props.items[i]}/>)
+      items.push(<DropdownMenuItem key={i} onClick={this.props.onClick} itemType={this.props.itemType} item={this.props.items[i]} />)
     }
 
     return (
@@ -106,8 +106,7 @@ class DropdownMenu extends React.Component {
 
   handleListItemOnClick(event) {
     //TODO
-    // this.props.handleListItemOnClick();
-    console.log("Hey you clicked an item");
+    this.props.handleListItemOnClick(event);
   }
 
   render() {

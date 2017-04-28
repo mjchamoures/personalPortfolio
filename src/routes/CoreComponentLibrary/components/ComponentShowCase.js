@@ -10,7 +10,7 @@ import React from 'react';
 import ComponentDescription from './ComponentDescription';
 import ComponentDemo from './ComponentDemo';
 
-import { Col, Panel, FormControl, ControlLabel, FormGroup } from 'react-bootstrap';
+import { Col, Panel, FormControl, ControlLabel, FormGroup, Row } from 'react-bootstrap';
 
 
 class ComponentShowCase extends React.Component {
@@ -20,9 +20,9 @@ class ComponentShowCase extends React.Component {
 
     return (
 
-      <Col xs={9}>
+      <Col md={9}>
 
-        <Col xs={12}>
+        <Col md={12}>
 
           <ComponentDescription
             displayName={this.props.component.displayName}
@@ -31,7 +31,7 @@ class ComponentShowCase extends React.Component {
           />
         </Col>
 
-        <Col xs={12}>
+        <Col md={12}>
 
           <ComponentDemo
             component={this.props.component.component}

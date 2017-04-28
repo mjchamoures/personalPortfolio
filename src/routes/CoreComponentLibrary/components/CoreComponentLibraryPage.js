@@ -10,7 +10,7 @@ import React from 'react';
 import ComponentSelector from './ComponentSelector';
 import ComponentShowCase from './ComponentShowCase';
 
-import { Col } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import Button from '../../../components/coreComponents/Button';
 import FormInputGroupWithLabel from '../../../components/coreComponents/FormInputGroupWithLabel';
 import StarRatingDemo from '../../../components/coreComponents/StarRating/StarRatingDemo';
@@ -47,7 +47,7 @@ class CoreComponentLibrary extends React.Component {
 
     return (
 
-      <Col xs={12}>
+      <Row>
 
         <ComponentSelector 
           components={componentList}
@@ -59,7 +59,7 @@ class CoreComponentLibrary extends React.Component {
           component={this.state.currentSelectedComponent}
         />
 
-      </Col>
+      </Row>
     
     );
 

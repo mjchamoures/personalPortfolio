@@ -4,7 +4,7 @@ import './Header.scss'
 
 export const Header = () => (
   <div className="text-center">
-    <h1>Michael Chamoures</h1>
+    <h1 className="display-3">Michael Chamoures</h1>
   </div>
 )
 

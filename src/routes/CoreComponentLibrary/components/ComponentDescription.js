@@ -8,7 +8,7 @@
 import React from 'react';
 
 import { Col, Panel, FormControl, ControlLabel, FormGroup } from 'react-bootstrap';
-
+import './CoreComponentLibraryPage.scss'; 
 
 
 
@@ -21,6 +21,8 @@ class ComponentDescription extends React.Component {
     return (
 
       <Panel>
+
+      <h2 className="component-description component-title">Test</h2>
 
         <form>
 
