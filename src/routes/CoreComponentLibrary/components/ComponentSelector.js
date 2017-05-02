@@ -25,14 +25,12 @@ class ComponentSelector extends React.Component {
 
     this.props.components.forEach((component) => {
 
-      let isActive = (component.id === this.props.currentSelectedComponentId) ? true : false; 
+      let isActive = (component.id === this.props.currentSelectedComponentId) ? "active" : ""; 
       let listItem = (
-          <li 
-            active={isActive} 
-            key={component.id}  
-          >
+          <li className={isActive} key={component.id} >
             <a eventKey={component.id} 
-            onClick={() => this.props.onClick(component.id) }>{component.displayName}</a>
+               onClick={() => this.props.onClick(component.id) }>{component.displayName}
+            </a>
           </li>
 
       );
@@ -44,7 +42,7 @@ class ComponentSelector extends React.Component {
       
         <div id="component-selector-sidebar" className="component-selector sidebar-offcanvas">
           <Col md={12}>
-            <h3>Components</h3>
+            <h3 className="component-selector-title">Components</h3>
 
             <ul className="nav nav-pills nav-stacked component-selector-list">
               {components}

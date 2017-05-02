@@ -29,8 +29,8 @@ class ComponentShowCase extends React.Component {
 
       <div id="component-showcase-main">
         <Col md={12}>
-          <p className="visible-xs">
-            <button type="button" className="btn btn-primary btn-xs" data-toggle="offcanvas" onClick={this.props.handleCollapseToggle}><i className="glyphicon glyphicon-chevron-left"></i></button>
+          <p className="visible-xs visible-sm">
+            <button type="button" className="btn btn-primary btn-xs" data-toggle="offcanvas" onClick={this.props.handleCollapseToggle}><i className="glyphicon glyphicon-indent-left"></i></button>
           </p>
           <Row>
             <Col md={12}>
