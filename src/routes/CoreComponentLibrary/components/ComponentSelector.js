@@ -29,11 +29,10 @@ class ComponentSelector extends React.Component {
       let listItem = (
           <li 
             active={isActive} 
-            key={component.id} 
-            eventKey={component.id} 
-            onSelect={() => this.props.onClick(component.id) } 
+            key={component.id}  
           >
-            <a>{component.displayName}</a>
+            <a eventKey={component.id} 
+            onClick={() => this.props.onClick(component.id) }>{component.displayName}</a>
           </li>
 
       );

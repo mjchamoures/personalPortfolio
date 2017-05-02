@@ -19,7 +19,7 @@ export const Navbar = (props) => (
     </IndexLink>
     {' · '}
     <IndexLink to='/coreComponentLibrary' activeClassName='route--active'>
-      Core Component Library
+      React Component Library
     </IndexLink>
   </div>
 

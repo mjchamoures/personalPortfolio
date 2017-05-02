@@ -82,14 +82,6 @@ class ProjectsPage extends React.Component {
 
 const projectList = [
   {
-    id : 'ComponentLibrary',
-    displayName : 'React Component Library!',
-    description : 'A set of React components',
-    component : <CoreComponentLibraryPage />,
-    repo : 'https://github.com/mjchamoures/personalPortfolio/blob/master/src/routes/CoreComponentLibrary/components/CoreComponentLibraryPage.js',
-    techUsed : 'React, bootstrap, etc...'
-  },
-  {
     id : 'SmartAccounts',
     displayName : 'Smart Accounts',
     description : "Smart Accounts give you full visibility of the Cisco software assets in your company. Now you can easily manage and control your licenses. Smart Accounts are a new way to manage your software licenses. They provide your company with a central location where you can manage Cisco licenses across the entire organization. Smart Accounts are similar to online bank accounts. You can view, store, manage, and move your Cisco software assets to where they are needed.",

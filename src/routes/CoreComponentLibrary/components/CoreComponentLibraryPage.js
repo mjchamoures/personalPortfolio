@@ -46,9 +46,7 @@ class CoreComponentLibrary extends React.Component {
   }
 
   handleCollapseToggle() {
-
     $('.row-offcanvas').toggleClass('active');
-    console.log("get");
   }
 
   render() {
