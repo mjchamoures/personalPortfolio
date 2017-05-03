@@ -22,24 +22,11 @@ class ComponentDescription extends React.Component {
 
       <Panel>
 
-      <h2 className="component-description component-title">Test</h2>
+      <h2 className="component-description component-title">{this.props.displayName}</h2>
 
         <form>
-
-        
-          <FormGroup controlId="formHorizontalName">
-            <Col componentClass={ControlLabel} sm={12}>
-              Component Name:
-            </Col>
-            <Col componentClass={FormControl.Static} xs={12} sm={9}>
-              {this.props.displayName}
-            </Col>
-          </FormGroup>
           
           <FormGroup controlId="formHorizontalDesc">
-            <Col componentClass={ControlLabel} sm={12}>
-              Description:
-            </Col>
             <Col componentClass={FormControl.Static} xs={12} sm={10}>
               {this.props.description}
             </Col>

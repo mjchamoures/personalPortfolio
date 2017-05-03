@@ -48,12 +48,21 @@ class ProjectDescription extends React.Component {
             </Col>
           </FormGroup>
 
+          <FormGroup controlId="formHorizontalName">
+            <Col componentClass={ControlLabel} sm={2}>
+              Site URL:
+            </Col>
+            <Col componentClass={FormControl.Static} xs={12} sm={10}>
+              <a href={this.props.siteUrl} target="_blank">{this.props.siteUrl}</a>
+            </Col>
+          </FormGroup>
+
           <FormGroup controlId="formHorizontalGithub">
             <Col componentClass={ControlLabel} sm={2}>
               More Info / Github:
             </Col>
             <Col xs={12} sm={10}>
-              <Button bsStyle="link" href={this.props.repo} target="_blank">{this.props.repo}</Button>
+              <a href={this.props.repo} target="_blank">{this.props.repo}</a>
             </Col>
           </FormGroup>
 

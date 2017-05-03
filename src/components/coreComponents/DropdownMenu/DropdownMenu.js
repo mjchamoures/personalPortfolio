@@ -1,7 +1,7 @@
 import React from 'react';
 import './DropdownMenu.scss';
 import { } from 'react-bootstrap';
-
+import Button from '../Button';
 
 
 class DropdownMenuItem extends React.Component {
@@ -73,7 +73,7 @@ class DropdownToggle extends React.Component {
     switch(this.props.toggleType) {
 
       case 'button' : 
-        toggleEl = (<button className="btn btn-sm btn-default" onClick={this.props.onClick}>{this.props.title}<b className="caret"></b></button>);
+        toggleEl = ( <button className="btn btn-md btn-default" onClick={this.props.onClick}>{this.props.title}<b className="caret"></b></button>);
         break;
       default :
         toggleEl = (<a className="default-toggle" onClick={this.props.onClick}>{this.props.title}<b className="caret"></b></a>);

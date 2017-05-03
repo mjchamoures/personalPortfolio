@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactPDF from 'react-pdf';
 
+import './styles/SmartAccountsDemo.scss';
+
 class SmartAccounts extends React.Component {
 
   constructor() {
@@ -23,13 +25,7 @@ class SmartAccounts extends React.Component {
 
       <div>
 
-        <a href="https://software.cisco.com/software/company/smartaccounts/home#accountcreation-account" target="_blank">Create a Smart Account</a>
-        
-        <ReactPDF
-          file='/SmartAccountsAtAGlance.pdf'
-          onDocumentLoad={this.onDocumentLoad}
-          onPageLoad={this.onPageLoad}
-        />
+        <object className={"smart-accounts-container"} data="http://software.cisco.com"/>
         
       </div>
 

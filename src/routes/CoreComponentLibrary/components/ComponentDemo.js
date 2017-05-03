@@ -7,12 +7,14 @@
 
 import React from 'react';
 
-import { Panel } from 'react-bootstrap';
-
+import { Panel, FormControl, FormGroup, Col } from 'react-bootstrap';
+import './CoreComponentLibraryPage.scss'; 
 
 const ComponentDemo = (props) => (
 
-  <Panel>
+  <Panel className={"component-demo-panel"}>
+    <h2 className="component-description component-title">Example</h2>
+
     {props.component}
   </Panel>  
 

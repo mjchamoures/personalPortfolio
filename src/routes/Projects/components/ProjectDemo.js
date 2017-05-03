@@ -8,6 +8,7 @@
 import React from 'react';
 import { Panel } from 'react-bootstrap';
 import TexasHoldEmComponent from './TexasHoldEmComponent';
+import './styles/ProjectDemo.scss';
 
 class ProjectDemo extends React.Component {
 
@@ -17,7 +18,7 @@ class ProjectDemo extends React.Component {
 
     return (
 
-      <Panel>
+      <Panel className={"project-demo-container"}>
        {this.props.component}
       </Panel>
 

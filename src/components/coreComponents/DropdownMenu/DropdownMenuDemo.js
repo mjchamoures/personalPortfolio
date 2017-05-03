@@ -1,6 +1,6 @@
 import React from 'react';
 import DropdownMenu from './DropdownMenu';
-import { Col } from 'react-bootstrap';
+import { Col, Row, FormControl } from 'react-bootstrap';
 
 
 
@@ -60,12 +60,33 @@ class DropdownMenuDemo extends React.Component {
       <div>
 
         <Col xs={12}>
-          <DropdownMenu
-            title={this.state.title}
-            toggleType={this.state.toggleType}
-            items={dropdownItems}
-            itemType={this.state.itemType}
-          />
+          Configure the dropdown menu variation with below options:
+        </Col>
+
+        <Col xs={12}>
+
+          <Col xs={12} sm={12} md={4}>
+            <FormControl type="text" placeholder={"Dropdown Title"} value={"Items"} onChange={this.handleTitleInputSubmitClick} />
+          </Col>
+
+          <Col xs={12} sm={12} md={4}>
+            <DropdownMenu
+              title={"Toggle Type"}
+              toggleType={this.state.toggleType}
+              items={dropdownItems}
+              itemType={this.state.itemType}
+            />
+          </Col>
+
+          <Col xs={12} sm={12} md={4}>
+            <DropdownMenu
+              title={"Item Type"}
+              toggleType={"button"}
+              items={dropdownItems}
+              itemType={this.state.itemType}
+            />
+          </Col>
+
         </Col>
 
         <Col xs={12}>
