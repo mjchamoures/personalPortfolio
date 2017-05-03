@@ -115,7 +115,7 @@ const projectList = [
     description : "This is a texas hold em game. You can add as many players as in a single deck. No Scoring yet.",
     component : <TexasHoldEmComponent />,
     repo : 'https://github.com/mjchamoures/personalPortfolio/blob/master/src/routes/Projects/components/TexasHoldEmComponent.jsx',
-    siteUrl : 'N/A',
+    siteUrl : null,
     techUsed : 'React, bootstrap, etc...'
   },
 ];

@@ -15,6 +15,9 @@ class ProjectDescription extends React.Component {
 
   render() {
 
+    let siteUrl = this.props.siteUrl ? 
+                  (<a href={this.props.siteUrl} target="_blank">{this.props.siteUrl}</a>) : 
+                  (<p>N/A</p>);
 
     return (
 
@@ -53,7 +56,7 @@ class ProjectDescription extends React.Component {
               Site URL:
             </Col>
             <Col componentClass={FormControl.Static} xs={12} sm={10}>
-              <a href={this.props.siteUrl} target="_blank">{this.props.siteUrl}</a>
+              {siteUrl}
             </Col>
           </FormGroup>
 
