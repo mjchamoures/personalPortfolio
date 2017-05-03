@@ -22,15 +22,6 @@ export const BasicInfo = (props) => (
           Michael Chamoures
         </Col>
       </FormGroup>
-      
-      <FormGroup controlId="formHorizontalEmail">
-        <Col componentClass={ControlLabel} sm={2}>
-          Email:
-        </Col>
-        <Col componentClass={FormControl.Static} xs={12} sm={10}>
-          mchamoures0@gmail.com
-        </Col>
-      </FormGroup>
 
       <FormGroup controlId="formHorizontalLinkedIn">
         <Col componentClass={ControlLabel} sm={2}>
